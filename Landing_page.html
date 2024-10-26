@@ -1,0 +1,254 @@
+<html>
+ <head>
+    <link rel="shortcut icon" type="x-icon" href="123.png" sizes="180x180"/>
+  <title>
+   Artsy Gallery
+  </title>
+  <link rel="logo" href="logo.png" type="image/logo" height="8" width="8"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            /* background-color: #fff; */
+        }
+        #background-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        }
+        .navbar {
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+            /* padding: 10px; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 30px;
+            color: rgb(11, 1, 1);
+            border-radius: 40px; /* Curved corners */
+            margin: 20px auto; /* Centering the navbar */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            max-width: 1100px; /* Optional: Limit the width */
+            height: 60px;
+        }
+        .navbar img {
+            width: 50px;
+            height: 50px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: rgb(7, 0, 0);
+            font-size: 20px;
+            padding: 5px 10px;
+            margin: 0 0px;
+            border-radius: 10px; /* Curved link background */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar a:hover {
+        background-color: #FFB6C1; /* Lighter pink on hover */
+        color: #333; /* Dark text color on hover*/
+        }
+        .navbar .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .navbar .dropdown-content {
+            display: none;
+            justify-content: center;
+            position:absolute;
+            /* background-color: #f9f9f9; */
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+            border-radius: 20px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .navbar .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        /* .navbar .dropdown-content a:hover {
+        /* background-color: #f1f1f1;     
+        } */
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .icons i {
+            margin: 0 10px;
+            font-size: 24px;
+        }
+        .main-content {
+            text-align: center;
+            padding: 20px;
+            /* display: flex;
+            justify-content: left; */
+        }
+        .main-content h1 {
+            font-size: 72px;
+            margin: 0;
+            color: #f1f1f1;
+        }
+        .main-content h2 {
+            font-size: 72px;
+            margin: 0;
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+            background-clip: text;
+            color: transparent;
+        }
+        .main-content .icons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .main-content .icons i {
+            font-size: 48px;
+            margin: 0 10px;
+            color: #f1f1f1;
+        }
+        .main-content .shop-now {
+            background-color: #ff5f6d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 24px;
+            display: inline-block;
+            margin: 20px 10px;
+        }
+        .main-content .learn-more {
+            color: rgb(248, 243, 243);
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .main-content .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .main-content .image-container img {
+            border-radius: 20px;
+            margin: 0 10px;
+        }
+        .main-content .large-box {
+            background-color: #d46b6b;
+            border-radius: 20px;
+            width: 60%;
+            height: 300px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .main-content .large-box .question {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .main-content .large-box .question i {
+            margin-right: 10px;
+        }
+  </style>
+ </head>
+ <body>
+    <video autoplay muted loop id="background-video">
+        <source src="background_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  <div class="navbar">
+    <img src="AG logo.png" alt="logo" height="30" width="30">
+   <!-- <img alt="Logo" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-LQDn8IY85GIPS0GS9QMqwAZW.png?st=2024-09-07T13%3A13%3A08Z&amp;se=2024-09-07T15%3A13%3A08Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-06T21%3A54%3A09Z&amp;ske=2024-09-07T21%3A54%3A09Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=441ZlD3g6Pe%2BoN9c2TrZUAXQWYw1TKlUMyfuTlzX3cw%3D" width="50"/> -->
+   <a href="#">Home</a>
+   <div class="dropdown">
+    <a href="#">Artworks</a>
+    <div class="dropdown-content">
+     <a href="Fine.html">Fine Art</a>
+     <a href="Modern.html">Modern Art</a>
+     <a href="3d.html"> 3d Art</a>
+     <a href="art eqp.html">Equipments</a>
+    </div>
+   </div>
+   <div class="dropdown">
+    <a href="#">Paints</a>
+    <div class="dropdown-content">
+     <a href="water.html">Water Paint</a>
+     <a href="oil.html"> Oil Paint</a>
+     <a href="sketch.html">Sketch</a>
+     <a href="paint eqp.html">Equipments</a>
+    </div>
+   </div>
+   <div class="dropdown">
+    <a href="#">Photography</a>
+    <div class="dropdown-content">
+     <a href="potrait.html">Portrait</a>
+     <a href="Landscape.html">Landscape</a>
+     <a href="Macro.html">Macro</a>
+     <a href="photography equep.html">Equipments</a>
+    </div>
+   </div>
+   <!-- <a href="#">Equipments</a> -->
+   <a href="#">Contact</a>
+   <div class="icons">
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user"></i>
+   </div>
+  </div>
+<!-- main body -->
+
+  <div class="main-content">
+   <h1>
+    Sell your
+   </h1>
+   <h2>
+    dreams
+   </h2>
+   <div class="icons">
+    <i class="fas fa-video">
+    </i>
+    <i class="fas fa-paint-roller">
+    </i>
+    <i class="fas fa-camera">
+    </i>
+    <i class="fas fa-paint-brush">
+    </i>
+    <i class="fas fa-camera-retro">
+    </i>
+   </div>
+   <a class="shop-now" href="xample2.html">
+    sign up
+    <i class="fas fa-arrow-right">
+    </i>
+   </a>
+   <a class="learn-more" href="#">
+    Learn More
+   </a>
+   <div class="image-container">
+    <img alt="Art supplies including paint and brushes" height="200" src="f1.jpeg" width="200"/>
+    <img alt="Art supplies including paint and brushes" height="200" src="f2.jpeg" width="200"/>
+   </div>
+   <!-- <div class="large-box">
+    <div class="question">
+     <i class="fas fa-arrow-up-right-from-square">
+     </i> -->
+     <!-- <span>
+      What's Behind your talent ?
+     </span> -->
+    <!-- </div>
+   </div> -->
+  </div>
+ </body>
+</html>
