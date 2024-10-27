@@ -1,0 +1,1089 @@
+<html>
+<head>
+    <title>Product Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/js-image-zoom@0.4.1/js-image-zoom.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <style>
+        *{
+            /* width:50vw; */
+            margin-right: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        header
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 86%;
+    padding: 20px 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+header .logo
+{
+    position:relative;
+    max-width: 90px;
+    /* max-height: 50px; */
+}
+header ul
+{
+    position: relative; 
+    display:flex;
+    margin-right: 450px;
+    margin-left: 300px;
+}
+header ul li
+{
+   list-style: none; 
+}
+header ul li a
+{
+  display: inline-block;
+  color:#333;
+  font-weight: 400;
+  margin-left: 40px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+header a:hover{
+    background-color: #ffa41c; /* Lighter pink on hover */
+        color: #fff;
+}
+header img:hover{
+    background-color: #fff; /* Lighter pink on hover */
+        /* color: #fff; */
+}
+header .main{
+    width:95%;
+    height:70px;
+    margin:0 auto;
+    align-items:center;
+    display:flex;
+    padding:20px;
+    /* justify-content:space-between; */
+    border-bottom:2px solid #ddd  ;
+    margin-left: -1600px;
+}
+        .container {
+            display: flex;
+            padding: 20px;
+            margin-top: 140px;
+        }
+        .left-column {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .left-column img {
+            width: 100%;
+            max-width: 400px;
+        }
+        .left-column .thumbnail-images {
+            display: flex;
+            margin-top: 10px;
+            margin-left: 60px;
+        }
+        .left-column .thumbnail-images img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .right-column {
+            flex: 2;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .product-brand {
+            color: #007185;
+            font-size: 14px;
+        }
+        .product-rating {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .product-rating .stars {
+            color: #ffa41c;
+            margin-right: 5px;
+        }
+        .product-rating .ratings-count {
+            color: #007185;
+            font-size: 14px;
+        }
+        .product-price {
+            font-size: 24px;
+            color: #b12704;
+            margin-top: 10px;
+        }
+        .product-mrp {
+            text-decoration: line-through;
+            color: #565959;
+            font-size: 14px;
+        }
+        .product-discount {
+            color: #b12704;
+            font-size: 14px;
+        }
+        .product-emi {
+            font-size: 14px;
+            color: #565959;
+            margin-top: 5px;
+        }
+        .product-emi a {
+            color: #007185;
+            text-decoration: none;
+        }
+        .product-emi a:hover {
+            text-decoration: underline;
+        }
+        /* .product-offers {
+            margin-top: 20px;
+        }
+        .product-offers .offer {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        } */
+        /* .product-offers .offer-title {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .product-offers .offer-details {
+            font-size: 14px;
+            color: #565959;
+        } */
+        .right-column{
+            margin-top: -410px;
+            margin-left: 100px;
+        }
+        .right-column .delivery-info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .right-column .delivery-info .price {
+            font-size: 24px;
+            color: #b12704;
+        }
+        .right-column .delivery-info .delivery-date {
+            font-size: 14px;
+            color: #565959;
+        }
+        .right-column .delivery-info .delivery-date a {
+            color: #007185;
+            text-decoration: none;
+        }
+        .right-column .delivery-info .delivery-date a:hover {
+            text-decoration: underline;
+        }
+        .right-column .delivery-info .stock-status {
+            font-size: 14px;
+            color: #007600;
+            margin-top: 10px;
+        }
+        .right-column .delivery-info .seller-info {
+            font-size: 14px;
+            color: #565959;
+            margin-top: 10px;
+        }
+        .right-column .delivery-info .seller-info a {
+            color: #007185;
+            text-decoration: none;
+        }
+        .right-column .delivery-info .seller-info a:hover {
+            text-decoration: underline;
+        }
+        .right-column .protection-plan {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .right-column .protection-plan .plan-title {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .right-column .protection-plan .plan-price {
+            font-size: 14px;
+            color: #b12704;
+        }
+        .right-column .quantity {
+            margin-top: 20px;
+        }
+        .right-column .quantity select {
+            padding: 5px;
+            font-size: 14px;
+        }
+        .right-column .buttons {
+            margin-top: 20px;
+        }
+        .right-column .buttons button {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+        .right-column .buttons .add-to-cart {
+            background-color: #ffa41c;
+            color: white;
+            margin-right: 10px;
+        }
+        .right-column .buttons .buy-now {
+            background-color: #e47911;
+            color: white;
+        }
+        .right-column .secure-transaction {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #007185;
+        }
+        .right-column .secure-transaction a {
+            color: #007185;
+            text-decoration: none;
+        }
+        .right-column .secure-transaction a:hover {
+            text-decoration: underline;
+        }
+        .right-column .add-to-wishlist {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #007185;
+        }
+        .right-column .add-to-wishlist a {
+            color: #007185;
+            text-decoration: none;
+        }
+        .right-column .add-to-wishlist a:hover {
+            text-decoration: underline;
+        }
+
+        /*slide page css*/
+
+        main{
+    width:103%;
+    height:840px;
+    margin:10px auto;
+    position:relative;
+    padding:5px 0;
+    margin-top: 130px;
+}
+main.text{
+    padding:10px;
+    text-align:center;
+    color:#554;
+}
+.text h1{
+    font-size:50px;
+}
+.text p{
+    width:60%;
+    padding:5px;
+    margin:auto;
+    line-height:30px;
+}
+main header{
+    width:98%;
+    height:60px;
+    margin:0 auto;
+    align-items:center;
+    display:flex;
+    padding:20px;
+    justify-content:space-between;
+    border-bottom:2px solid #ddd;
+    margin-top: -80px;
+}
+header p span{
+    font-size:40px;
+    margin:0 5px;
+    cursor:pointer;
+    color:#555;
+    width:30px;
+    height:30px;
+    display:inline-block;
+    line-height:19px;
+    text-align:center;
+    border-radius:3px;
+}
+header p span:hover{
+    background:#222;
+    color:white;
+}
+section{
+    width:98%;
+    height:600px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    overflow-x:auto;
+}
+section::-webkit-scrollbar{
+    display:none;
+}
+section .product{
+    min-width:20%;
+    height:80%;
+    background:whitesmoke;
+    margin:0 20px 0 0;
+    border-radius:20px;
+    position:relative;
+    left:0;
+    transition:0.5s;
+    margin-left: 10px;
+}
+picture{
+                width:87%;
+                height:60%;
+                padding:20px;
+                display: flex;
+                overflow:hidden;
+                margin-bottom:20px;
+                margin-top: 0px;
+}
+picture img{
+    width:100%;
+}
+.detail .button{
+    width:90%;
+    margin:auto;
+    padding:5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-size:20px;
+    color:#444;
+}
+small{
+    color:#555;
+}
+/* a{
+    text-decoration: none;
+    padding:6px 14px;
+    font-size:15px;
+    margin:5px 0 0 20px;
+    display:inline-block;
+    background: #6773ff;
+    color:white;
+    border-radius: 10px;
+} */
+p.star{
+    margin:5px auto;
+    margin-left: 10px;
+    width:65%;
+    font-size:25px;
+    color:#808080;
+}
+@media(max-width:768px)
+{
+    .text h1{
+        font-size:35px;
+    }
+    .text p{
+        width:90%;
+    }
+    header h1{
+        font-size:25px;
+    }
+    header p span{
+        font-size:30px;
+    }
+    section .product{
+        min-width:49%;
+        margin:0 10px 0 0 ;
+    }
+    .deatil .button{
+        font-size:16px;
+    }
+    a{
+        padding:6px 10px;
+    }
+}
+.product:hover {
+    transform:scale(1.1);
+}
+
+
+/*footer css*/
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+footer{
+    position: fixed;
+    bottom:0;
+}
+
+@media(max-height:800px)
+{
+    footer{
+        position: static;
+    }
+
+    header{
+        padding-top: 40px;
+    }
+}
+.footer-distributed{
+    background:whitesmoke;
+    box-sizing:border-box;
+    widows:100%;
+    text-align:left;
+    font:bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top:80px;
+    /* margin-bottom: 50px; */
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-distributed .footer-left{
+    width: 30%;
+}
+
+.footer-distributed h3{
+    color:#e65a71;
+    font:normal 36px 'cookie',cursive;
+    margin:0;
+}
+
+.footer-distributed h3 span{
+    color:#e0ac1c;
+}
+
+.footer-distributed .footer-links{
+    color:#0b0b0b;
+    margin:20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.footer-distributed .footer-company-name{
+    color:#8f9296;
+    font-size:14px;
+    font-weight:normal;
+    margin:0;
+
+}
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color: #33383b;
+    color:#ffff;
+    font-size: 25px;
+    width:38px;
+    height:38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px ;
+    margin:10px 15px;
+    vertical-align:middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #090909;
+    vertical-align:middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span{
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a{
+    color:#e0ac1a;
+    text-decoration: none;
+}
+.footer-distributed .footer-right{
+    width:30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height:20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color: #0a0a0a;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 55px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color:#0a0909;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover{
+    background-color: #3f71ea;
+}
+
+.footer-links a:hover{
+    color:#3f71ea;
+}
+
+@media(max-width:880px){
+    .footer-distributed .footer-links, .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display:block;
+        width:100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+.footer-distributed .footer-center i{
+    margin-left: 0;
+
+}
+    </style>
+</head>
+<body>
+    <!-- <div class="header">
+        <i class="fas fa-bars menu-icon"></i>
+        <div class="nav-links">
+            <a href="#">All</a>
+            <div class="dropdown">
+                <a href="#">Fresh <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <a href="#">MX Player</a> -->
+            <!-- <a href="#">Sell</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Today's Deals</a> -->
+            <!-- <a href="#">Mobiles</a> -->
+            <!-- <a href="#">Prime</a>
+            <a href="#">Customer Service</a> -->
+            <!-- <a href="#">Electronics</a> -->
+            <!-- <a href="#">Home & Kitchen</a> -->
+            <!-- <a href="#">Fashion</a> -->
+            <!-- <a href="#">New Releases</a>
+        </div>
+    </div> --> 
+    <header style="margin-top:-30px;">
+        <a href="#"><img src="logo.png" class="logo"></a>
+        <ul>
+         <li><a href="#">Home</a></li>
+         <!-- <li><a href="#">Menu</a></li> -->
+         <li><a href="sell.html" style="width:100px;">Product Sell</a></li>
+         <li><a href="slide img.html" style="width:100px;">what's New</a></li>
+         <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="main"></div>
+     </header>
+    <div class="container">
+        <div class="left-column">
+            <div id="cont" style="width:500px;">
+            <img src="wa1.jpeg" alt="Digital Water Painting Photo Frame" />
+        </div>
+            <div class="thumbnail-images">
+                <img src="wa1.jpeg" alt="Thumbnail 1" />
+                <img src="wa2.jpeg" alt="Thumbnail 2" />
+                <img src="wa3.jpeg" alt="Thumbnail 3" />
+                <img src="wa4.jpeg" alt="Thumbnail 4"/>
+        <div class="right-column">
+            <div class="product-title">Blossom Personalized Digital Water Painting Photo Frame Multicolor (8x12 Black)</div>
+            <div class="product-brand">Brand: Jadoun</div>
+            <div class="product-rating">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="ratings-count">337 ratings</div>
+            </div>
+            <div class="product-price">₹599</div>
+            <div class="product-mrp">M.R.P.: ₹1,499</div>
+            <div class="product-discount">-60%</div>
+            <div class="product-emi">
+                Inclusive of all taxes<br/>
+                EMI starts at ₹208 per month. <a href="#">EMI options</a>
+            </div>
+            <!-- <div class="product-offers">
+                <div class="offer">
+                    <div class="offer-title">Bank Offer</div>
+                    <div class="offer-details">Upto ₹4,000.00 discount on SBI Credit Cards</div>
+                </div>
+                <div class="offer">
+                    <div class="offer-title">Partner Offers</div>
+                    <div class="offer-details">Get GST invoice and save up to 28% on business purchases.</div>
+                </div>
+            </div> -->
+            <div class="delivery-info">
+                <div class="price">₹599.00</div>
+                <div class="delivery-date">
+                    FREE delivery Thursday, 3 October for Prime members. Order within 1 hr 14 mins. <a href="#">Details</a>
+                </div>
+                <div class="stock-status">In stock</div>
+                <div class="seller-info">
+                    Delivered by <a href="#">Amazon</a><br/>
+                    Sold by <a href="#">Jadoun enterprise & Printing</a>
+                </div>
+            </div>
+            <div class="protection-plan">
+                <div class="plan-title">Add a Protection Plan:</div>
+                <div class="plan-price">
+                    <input type="checkbox"/> 1 Year Fire Protection Plan for ₹98.00
+                </div>
+            </div>
+            <div class="quantity">
+                Quantity:
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="secure-transaction">
+                <a href="#">Secure transaction</a>
+            </div>
+            <div class="add-to-wishlist">
+                <a href="#">Add to Wish List</a>
+            </div>
+        </div>
+    </div>
+    <!--slide page code-->
+    <main>
+        <header>
+            <h1>Related Paints</h1>
+            <p>
+                <span>&#139;</span>
+                <span>&#155;</span>
+            </p>
+        </header>
+        <section>
+            <div class="product">
+                <a href="one pic.html" style="text-decoration: none;color: black;margin-left:10px;color:#040405;padding:1px;">
+                <picture>
+                    <img src="wa3.jpeg" alt="" style="margin-top: -15px;height:100%;">
+                </picture>
+                <div class="details" style="margin-top: -20px;">
+                    <p style="margin-left:10px;">
+                        <b>Product One</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star" style="margin-top: -30px;">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="one pic.html" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="wa4.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Two</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="wa5.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Three</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="wa6.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Four</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="oi3.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Five</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="oi6.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Six</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="oi9.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Seven</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="oil3.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Eight</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="sk4.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Nine</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="sk9.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Ten</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <picture>
+                    <img src="sk2.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Eleven</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+
+            
+            <div class="product">
+                <picture>
+                    <img src="sk7.jpeg" alt="">
+                </picture>
+                <div class="details">
+                    <p style="margin-left:10px;">
+                        <b>Product Twoelve</b>
+                        <small>New arrival</small>
+                    </p>
+                    <samp style="margin-left:10px;">$45.00</samp>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                    <a href="#" style="text-decoration: none;color: black;margin-left:10px;color:#6773ff;">See more...</a>
+                </div>
+            </div>
+        </section>
+
+        <!--footer page-->
+
+        <footer class="footer-distributed" style="margin-top:50px;margin-left:-19px;margin-right:-12px;">
+            <div class="footer-left">
+                <h3>Artsy <span> Gallery</span></h3>
+        
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    |
+                    <a href="#">About</a>
+                    |
+                    <a href="#">Contact</a>
+                    |
+                    <a href="#">Blog</a>
+                    |
+                </p>
+        
+                <p class="footer-company-name">2024<strong> Artsy Gallery</strong>
+                    All rights reserved</p>
+            </div>
+        
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Kolkata</span>
+                    India</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+91754987634</p>
+                </div>
+                 <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="#">xyz@gmail.com</a></p>
+                </div>
+            </div>
+        
+            <div class="footer-right">
+                <p class="footer company-about" style="color:#8f9296;font-weight:normal;">
+                    <span style="color:#0a0a0a;font-weight:bold;">About the website</span><br><br>
+                    <strong style="color:#0c0c0c;">Artsy Gallery</strong> is an art gallery management system where you can buy or sell paintings.
+                    You can also get an opportunity to show your hidden talents.Thank You!
+                </p>
+                <div class="footer icons" style="margin-top: 50px;font-size: 27px;line-height: 38px;">
+                    <a href="#"><i class="fa fa-facebook" style="color:#060505;"></i></a>
+                    <a href="#"><i class="fa fa-instagram" style="padding-left:10px;color:#060505;"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" style="padding-left:10px;color:#060505;"></i></a>
+                    <a href="#"><i class="fa fa-twitter" style="padding-left:10px;color:#060505;"></i></a>
+                    <a href="#"><i class="fa fa-youtube" style="padding-left:10px;color:#060505;"></i></a>
+                </div>
+            </div>
+            </footer>
+        <!-- <script src="slide img.js"></script> -->
+         <script>
+            let span = document.getElementsByTagName('span');
+let product = document.getElementsByClassName('product');
+let product_page = Math.ceil(product.length/4);
+let l=0;
+let movePer = 25.34;
+let maxMove =203;
+
+//Mobile View 
+let mobile_view = window.matchMedia("(max-width:768px)");
+if(mobile_view.matches)
+{
+    movePer = 50.36;
+    maxMove = 504;
+}
+
+let right_mover= ()=>{
+l = l + movePer;
+if(product == 1){l= 0}
+for(const i of product)
+ {
+    if (l > maxMove) {l = l - movePer;}
+    i.style.left = '-' + l +'%';
+ }
+}
+
+let left_mover = ()=>{
+l = l - movePer;
+if(l<=0) {l=0;}
+for(const i of product)
+{
+if(product_page > 1)
+i.style.left = '-' + 1 + '%';
+}
+}
+span[1].onclick = ()=>{right_mover();}
+span[0].onclick = ()=>{left_mover();}
+</script>
+    </main>
+    <script src="one pic.js"></script>
+</body>
+</html>

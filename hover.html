@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+
+        .wrapper{
+            text-align: center;
+            margin-left: auto;
+            margin-right:auto;
+        }
+
+        .parent{
+            width:37%;
+            margin:20px;
+            height: 280px;
+            overflow:hidden;
+            position:relative;
+            display:inline-block;
+            cursor:pointer;
+            box-shadow: 0 4px -1px rgba(0,0,0,0.5);
+            border-radius: 10px;
+        }
+        .child{
+            height:100%;
+            width:100%;
+            background-size:cover;
+            transition: all 1.1s ;
+        }
+        .bg-one{
+            background-image: url(wa1.jpeg);
+        }
+        .bg-two{
+            background-image: url(wa2.jpeg);
+        }
+        .bg-three{
+            background-image: url(wa3.jpeg);
+        }
+        .bg-four{
+            background-image: url(wa4.jpeg);
+        }
+
+        .parent:hover .child {
+            transform:scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="parent">
+            <div class="child bg-one"></div>
+        </div>
+        <div class="parent">
+            <div class="child bg-two"></div>
+        </div>
+        <div class="parent">
+            <div class="child bg-three"></div>
+        </div>
+        <div class="parent">
+            <div class="child bg-four"></div>
+        </div>
+    </div>
+</body>
+</html>

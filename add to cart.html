@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Store</title>
+    <style>
+        .product {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            display: inline-block;
+            width: 200px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Art Store</h1>
+    
+    <div class="product">
+        <img src="wa1.jpeg" alt="Art 1">
+        <h2>Art 1</h2>
+        <p>Price: $100</p>
+        <button class="button" onclick="addToCart('Art 1', 100)">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+        <img src="wa2.jpeg" alt="Art 2">
+        <h2>Art 2</h2>
+        <p>Price: $150</p>
+        <button class="button" onclick="addToCart('Art 2', 150)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="wa3.jpeg" alt="Art 3" height="-100px">
+        <h2>Art 3</h2>
+        <p>Price: $200</p>
+        <button class="button" onclick="addToCart('Art 3', 200)">Add to Cart</button>
+    </div>
+
+    <div>
+        <button class="button" onclick="viewCart()">View Cart</button>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || []; // Initialize cart from local storage
+
+        function addToCart(product, price) {
+            cart.push({product, price});
+            alert(product + ' has been added to your cart!');
+            localStorage.setItem('cart', JSON.stringify(cart)); // Save cart in local storage
+        }
+
+        function viewCart() {
+            window.location.href = 'cart.html'; // Redirect to the cart page
+        }
+    </script>
+</body>
+</html>
