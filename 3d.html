@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #d4a5e3, #929ed4);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 400px;
+            transition: transform 0.5s;
+        }
+
+        .form-container {
+            background-color: #f3e9f7;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 0;
+            transition: transform 0.5s;
+        }
+
+        .image-container {
+            width: 250px;
+            height: 250px;
+            background: url('log in pic.jpeg') no-repeat center center/cover;
+            border-radius: 15px;
+            position: absolute;
+            right: 0;
+            transition: transform 0.5s;
+        }
+
+        .form-container.moved {
+            transform: translateX(300px);
+        }
+
+        .image-container.moved {
+            transform: translateX(-300px);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6c63ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .form-container .alternative {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            color: #6c63ff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-container" id="form">
+            <h2>Create Account</h2>
+            <input type="text" placeholder="User name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign up</button>
+            <span class="alternative" onclick="moveElements()">Already have an account?</span>
+        </div>
+        <div class="image-container" id="image">
+            <!-- The image will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        function moveElements() {
+            document.getElementById('form').classList.toggle('moved');
+            document.getElementById('image').classList.toggle('moved');
+        }
+    </script>
+
+</body>
+</html>
