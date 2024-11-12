@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <title >landing page</title>
+    <link rel="stylesheet" href="\CSS\home.css">
+</head>
+<body>
+ <section>
+    <div class="circle"></div>
+    <header>
+       <a href="#"><img src="\IMAGES\logo.png" class="logo"></a>
+       <ul style="margin-right: -40px;">
+        <li><a href="#">Home</a></li>
+        <li>
+        <div class="dropdown">
+            <a href="slide img.html">Art Category</a>
+            <!-- <div class="dropdown-content">
+             <a href="slide img.html">Water Paint</a>
+             <a href="slide img.html" style="margin-left: 29px;"> Oil Paint</a>
+             <a href="slide img.html"  style="margin-left: 29px;padding-right: -10px;">Sketch</a>
+            </div> -->
+           </div>
+        </li>
+        <li><a href="sell.html">Sell Product</a></li>
+        <li><a href="slide img.html">What's New</a></li>
+        <!-- <li><a href="#">Contact</a></li> -->
+       </ul>
+
+
+       <div class="container" style="margin-right: -280px;">
+        <!--animated searchbar2-->
+        <form action="https://www.google.com/search" class="search" id="search-bar">
+            <input type="search" placeholder="Type something..." name="q" class="search__input" style="width:150px;">
+            <div class="search__button" id="search-button">
+                <i class="ri-search-2-line search__icon"></i>
+                <i class="ri-close-line search__close"></i>
+            </div>
+        </form>
+        </div>
+        <!--animated drop down button-->
+
+              <!--   <img src="" style="height:50px; width:50px;" class="navbar-logo" alt="logo margin-right:-20px;" />
+           <ul class="navbar-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">Playlists</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">About</a></li>
+            </ul> -->
+
+          <nav class="navbar" style="margin-right: -100px;">
+            <div class="profile-dropdown">
+              <div onclick="toggle()" class="profile-dropdown-btn">
+                <div class="profile-img" style="margin-right: -10px;">
+                  <i class="fa-solid fa-circle"></i>
+                </div>
+      
+                <span>
+                  Victoria
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+              </div>
+      
+              <ul class="profile-dropdown-list">
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    Edit Profile
+                  </a>
+                </li>
+                <br>
+      
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-regular fa-envelope"></i>
+                    Inbox
+                  </a>
+                </li>
+                <br>
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-solid fa fa-phone"></i>
+                    Contact
+                  </a>
+                </li>
+                <br>
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-solid fa-sliders"></i>
+                    Settings
+                  </a>
+                </li>
+              
+                <br>
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-regular fa-circle-question"></i>
+                    Help & Support
+                  </a>
+                </li>
+                <br>
+      
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Log out
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="textBox">
+       <h2 style="margin-bottom: -90px;">It's not just picture<br>It's </h2>
+       <h2>
+        <div class="wrapper">
+            <!-- <div class="static-txt">I'm a</div> -->
+            <ul class="dynamic-txts">
+              <li><span>Artsy Gallery</span></li>
+              <li><span>Paints</span></li>
+              <li><span>Photography</span></li>
+              <li><span>Art</span></li>
+              <!-- <li><span>E</span></li> -->
+            </ul>
+          </div>
+        </h2>
+       <p>A space where creativity thrives and every brushstrokes,sculpture,and installation finds its perfect audience .
+        It is a art gallery management system where you can buy or sell paintings/equipments.You can also get an opportunity to show your hidden talents.
+        </p>
+        <a href="#">Thank You!</a>
+        </div>
+        <div class="imgBox">
+            <img src="\IMAGES\paint stand.png" class="starbucks" style="margin-right: 90px;width:300%;height:100%;">
+            </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="\IMAGES\paint stand.png" onclick="imgSlider('\ IMAGES\ paint stand.png');changeCircleColor('#017143')"></li>
+        <li><img src="\IMAGES\paint brush 2.png" onclick="imgSlider('\ IMAGES\ paint brush 2.png');changeCircleColor('#eb7495')"></li>
+        <li><img src="\IMAGES\DSLR.png" onclick="imgSlider('\ IMAGES\ DSLR.png');changeCircleColor('#d752b1')"></li>
+    </ul>
+    <!-- <ul class="sci">
+        <li><a href="#"><img src="facebook.png" style="background-color: rgb(243, 11, 208);"></a></li>
+        <li><a href="#"><img src="instagram.png"></a></li>
+        <li><a href="#"><img src="twitter.png"></a></li>
+    </ul> -->
+
+    </section>
+
+    <!--footer page-->
+
+    <footer class="footer-distributed" style="margin-top:50px;margin-left:-7px;margin-right:-7px;">
+        <div class="footer-left">
+            <h3>Artsy <span> Gallery</span></h3>
+    
+            <p class="footer-links">
+                <a href="#">Home</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+                |
+                <a href="#">Blog</a>
+                |
+            </p>
+    
+            <p class="footer-company-name">2024<strong> Artsy Gallery</strong>
+                All rights reserved</p>
+        </div>
+    
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Kolkata</span>
+                India</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91754987634</p>
+            </div>
+             <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="#">xyz@gmail.com</a></p>
+            </div>
+        </div>
+    
+        <div class="footer-right">
+            <p class="footer company-about" style="color:#8f9296;font-weight:normal;">
+                <span style="color:#0a0a0a;font-weight:bold;">About the website</span><br><br>
+                <strong style="color:#0c0c0c;">Artsy Gallery</strong> is an art gallery management system where you can buy or sell paintings.
+                You can also get an opportunity to show your hidden talents.Thank You!
+            </p>
+            <div class="footer icons" style="margin-top: 50px;font-size: 27px;line-height: 38px;">
+                <a href="#"><i class="fa fa-facebook" style="color:#060505;"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="padding-left:10px;color:#060505;"></i></a>
+                <a href="#"><i class="fa fa-linkedin" style="padding-left:10px;color:#060505;"></i></a>
+                <a href="#"><i class="fa fa-twitter" style="padding-left:10px;color:#060505;"></i></a>
+                <a href="#"><i class="fa fa-youtube" style="padding-left:10px;color:#060505;"></i></a>
+            </div>
+        </div>
+        </footer>
+    <script src="\SCRIPT\home.js"></script>
+ </body>
+</html>

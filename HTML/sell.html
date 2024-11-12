@@ -1,0 +1,67 @@
+<html>
+<head>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="\CSS\sell.css">
+</head>
+<body>
+    <div class="container">
+        <h2>START SELLING YOUR PRODUCTS :</h2>
+        <!-- <div class="product-category">
+            <input type="radio" name="category" id="artworks">
+            <label for="artworks"><img src="oil1.jpeg" height="140px" width="120px"><div class="first"><a href="ARTWORKS" style="color:fff;text-decoration: none; font-weight:600;">ARTWORKS</a></div></label>
+        </div>
+        <div class="product-category">
+            <input type="radio" name="category" id="paintings">
+            <label for="artworks"><img src="pg.webp" height="140px" width="120px"><div class="first"><a href="PRODUCT" style="color:fff;text-decoration: none; font-weight:600;">PAINTINGS</a></div></label>
+        </div>
+        <br>
+        <div class="product-category1">
+            <input type="radio" name="category" id="photography">
+            <label for="artworks"><img src="pg (2).webp" height="140px" width="120px"><div class="first"><a href="PRODUCT" style="color:fff;text-decoration: none; font-weight:600;">PHOTOGRAPHY</a></div></label>
+        </div>
+        <div class="product-category1">
+            <input type="radio" name="category" id="equipments">
+            <label for="artworks"><img src="mixup.webp" height="140px" width="120px"><div class="first"><a href="PRODUCT" style="color:fff;text-decoration: none; font-weight:600;">EQUIPMENTS</a></div></label>
+        </div> -->
+    </div>
+    <div class="form-container" style="margin-top:70px;">
+        <div class="product-image"><a href="ARTWORKS">PRODUCT</a></div>
+        <div class="product-details">
+            <h3>PRODUCT DETAILS</h3>
+            <input type="text" placeholder="PRODUCT NAME:">
+            <input type="text" placeholder="PRODUCT TYPE:">
+            <input type="text" placeholder="DESCRIPTION:">
+            <div class="dimensions">
+                <input type="text" placeholder="HEIGHT:">
+                <input type="text" placeholder="WIDTH:">
+            </div>
+            <input type="text" placeholder="PRICE:">
+        </div>
+    </div>
+
+
+
+    <!--upload option-->
+    
+    <div class="montainer">
+        <input type="file" id="file" accept="image/*" hidden>
+        <div class="img-area" data-img="">
+            <i class='bx bxs-cloud-upload icon'></i>
+            <h3>Upload Image</h3>
+            <p>Image size must be less than <span>2MB</span></p>
+        </div>
+        <button class="select-image">Select Image</button>
+    </div>
+
+
+    <!--admin Approval-->
+    <div class="approval-pontainer">
+        <span>
+         Admin Approval:
+        </span>
+        <input type="checkbox" checked/>
+       </div>
+       
+       <script src="\SCRIPT\sell.js"></script>
+</body>
+</html>
